@@ -1,0 +1,45 @@
+{
+    "ATTITUDE": [
+        "1. Acceptance of Feedback/FTO/FTP",
+        "2. Attitude toward Police Work",
+        "3. Integrity/Ethics",
+        "4. Leadership"
+    ],
+    "APPEARANCE": [
+        "5. General Appearance"
+    ],
+    "RELATIONSHIPS": [
+        "6. With Citizens/Community",
+        "7. With Other Department Personnel"
+    ],
+    "PERFORMANCE": [
+        "9. Driving Skill: Normal Conditions",
+        "10. Driving Skill: Moderate/High Stress Conditions",
+        "11. Use of Map Book/GPS: Orientation/Response Time",
+        "12. Report writing: Organization/Details/Use of Time",
+        "13. Report writing: Grammar/Spelling/Neatness",
+        "14. Field Performance: Normal Conditions",
+        "15. Field Performance: Stress Conditions",
+        "16. Investigative Skills",
+        "17. Interview/Interrogation Skills",
+        "18. Self-initiated Field Activity",
+        "19. Officer Safety: General",
+        "20. Officer Safety: Suspicious Persons/Suspects/Prisoners",
+        "21. Control of Conflict: Voice Command",
+        "22. Control of Conflict: Physical Skill",
+        "23. Problem-solving Techniques/Decision-making",
+        "24. Communications: Codes/Procedure",
+        "25. Radio: Listens and comprehends",
+        "26. Radio: Articulation of Transmissions",
+        "27. Mobile Computer Terminal"
+    ],
+    "KNOWLEDGE": [
+        "28. Department Policies and Procedures",
+        "29. Criminal Procedure"
+    ],
+    "(( ROLEPLAY QUALITY ))": [
+        "30. Roleplay Quality",
+        "31. Character Depth and Portrayal",
+        "32. Out-of-Character Demeanor"
+    ]
+}
