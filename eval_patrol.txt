@@ -1,0 +1,208 @@
+[font=Arial][center]LOS SANTOS POLICE DEPARTMENT
+[size=120][color=black][b]PROBATIONARY POLICE OFFICER 
+EVALUATION PATROL REPORT[/b][/font][/color][/size][/center]
+
+[table2=1,black,transparent,Arial]
+[tr]
+[tdwidth=1,black,transparent,top,left,30,5]
+[size=87]PROBATIONARY POLICE OFFICER[/size]
+${this.prob_name}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,8,5]
+[size=87]SERIAL NO.[/size]
+${this.prob_serial_num}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,25,5]
+[size=87]FIELD TRAINING OFFICER[/size]
+${this.fto_name}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,8,5]
+[size=87]SERIAL NO.[/size]
+${this.fto_serial_num}
+[/tdwidth][/tr]
+
+[tr]
+[tdwidth=1,black,transparent,top,left,8,5]
+[size=87]PATROL NUMBER[/size]
+${this.ftp_number}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,25,5]
+[size=87]DATE[/size]
+${moment(new Date(this.ftp_date)).format("DD/MMM/YYYY").toUpperCase()}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,15,5]
+[size=87]TIME[/size]
+${moment(new Date(this.ftp_date)).format("HH:mm").toUpperCase()}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,15,5]
+[size=87]DURATION[/size]
+${this.ftp_duration}
+[/tdwidth][/tr]
+[/table2][font=Arial]
+
+${this.ftp_sufficient == true ? '[cbc][/cbc]' : '[cb][/cb]'} [b]This Evaluation Patrol was sufficient, allowing for a complete assessment of the Officer.[/b]
+
+[font=Arial][b][size=110]PATROL NARRATIVE[/size][/b][/font]
+
+${this.ftp_narrative}
+
+[font=Arial][b][size=110]INCIDENT SUMMARY[/size][/b][/font]
+
+${this.ftp_isummary}
+
+
+[font=Arial][b][size=110]LEARNING GOALS[/size][/b]
+
+[b]RATING INSTRUCTIONS: Use the following scale to rate probationary officers on their performance. For grades of Superior or Needs Improvement, the Training Officer must give an explanation in the Patrol Narrative.[/b]
+[list=1][b]Needs Improvement (N/I)[/b] - Probationary Officer demonstrated unsatisfactory behaviour with this learning goal and requires further instruction.
+[*][b]Competent (C)[/b] - Probationary Officer demonstrated acceptable/competent behavior with this learning goal.
+[*][b]Superior (S)[/b] - Probationary Officer demonstrated superior behaviour with this learning goal, and goes above and beyond the standards expected of them.[/list]
+
+[table]
+[tr]
+[td][font=Arial][b]ATTITUDE[/b][/td]
+[td][font=Arial][center][b]S[/b][/center][/td]
+[td][font=Arial][center][b]C[/b][/center][/td]
+[td][font=Arial][center][b]N/I[/b][/center][/td]
+[/tr]
+[tr]
+[td][font=Arial]1. Acceptance of Feedback/FTO/FTP[/td]
+${scores[0]}
+[/tr]
+[tr]
+[td][font=Arial]2. Attitude toward Police Work[/td]
+${scores[1]}
+[/tr]
+[tr]
+[td][font=Arial]3. Integrity/Ethics[/td]
+${scores[2]}
+[/tr]
+[tr]
+[td][font=Arial]4. Leadership[color=transparent]----------------------------------------------------------[/color][/td]
+${scores[3]}
+[/tr]
+[tr]
+[td][b][font=Arial]APPEARANCE[/b][/td]
+[/tr]
+[tr]
+[td][font=Arial]5. General Appearance[color=transparent]---------------------------------------------[/color][/td]
+${scores[4]}
+[/tr]
+[tr]
+[td][font=Arial][b]RELATIONSHIPS[/b][/td]
+[/tr]
+[tr]
+[td][font=Arial]6. With Citizens/Community[color=transparent]-------------------------------------[/color][/td]
+${scores[5]}
+[/tr]
+[tr]
+[td][font=Arial]7. With Other Department Personnel[/td]
+${scores[6]}
+[/tr]
+[tr]
+[tr]
+[td][b][font=Arial]PERFORMANCE[/b][/td]
+[/tr]
+[tr]
+[td][font=Arial]9. Driving Skill: Normal Conditions[color=transparent]--[/color][/td]
+${scores[7]}
+[/tr]
+[tr]
+[td][font=Arial]10. Driving Skill: Moderate/High Stress Conditions[/td]
+${scores[8]}
+[/tr]
+[tr]
+[td][font=Arial]11. Use of Map Book/GPS: Orientation/Response Time[/td]
+${scores[9]}
+[/tr]
+[tr]
+[td][font=Arial]12. Report writing: Organization/Details/Use of Time[/td]
+${scores[10]}
+[/tr]
+[tr]
+[td][font=Arial]13. Report writing: Grammar/Spelling/Neatness[/td]
+${scores[11]}
+[/tr]
+[tr]
+[td][font=Arial]14. Field Performance: Normal Conditions[/td]
+${scores[12]}
+[/tr]
+[tr]
+[td][font=Arial]15. Field Performance: Stress Conditions[/td]
+${scores[13]}
+[/tr]
+[tr]
+[td][font=Arial]16. Investigative Skills[/td]
+${scores[14]}
+[/tr]
+[tr]
+[td][font=Arial]17. Interview/Interrogation Skills[/td]
+${scores[15]}
+[/tr]
+[tr]
+[td][font=Arial]18. Self-initiated Field Activity[/td]
+${scores[16]}
+[/tr]
+[tr]
+[td][font=Arial]19. Officer Safety: General[/td]
+${scores[17]}
+[/tr]
+[tr]
+[td]20. Officer Safety: Suspicious Persons/Suspects/Prisoners[/td]
+${scores[18]}
+[/tr]
+[tr]
+[td][font=Arial]21. Control of Conflict: Voice Command[/td]
+${scores[19]}
+[/tr]
+[tr]
+[td][font=Arial]22. Control of Conflict: Physical Skill[/td]
+${scores[20]}
+[/tr]
+[tr]
+[td][font=Arial]23. Problem-solving Techniques/Decision-making[/td]
+${scores[21]}
+[/tr]
+[tr]
+[td]24. Communications: Codes/Procedure[/td]
+${scores[22]}
+[/tr]
+[tr]
+[td][font=Arial]25. Radio: Listens and comprehends[/td]
+${scores[23]}
+[/tr]
+[tr]
+[td][font=Arial]26. Radio: Articulation of Transmissions[/td]
+${scores[24]}
+[/tr]
+[tr]
+[td][font=Arial]27. Mobile Computer Terminal[/td]
+${scores[25]}
+[/tr]
+[tr]
+[td][font=Arial][b]KNOWLEDGE[/b][/td]
+[/tr]
+[tr]
+[td][font=Arial]28. Department Policies and Procedures[color=transparent]-----------------------[/color][/td]
+${scores[26]}
+[/tr]
+[tr]
+[tr]
+[td][font=Arial]29. Criminal Procedure[/td]
+${scores[27]}
+[/tr]
+[tr]
+[td][font=Arial][b](( ROLEPLAY QUALITY ))[/b][/td]
+[/tr]
+[tr]
+[td][font=Arial]30. Roleplay Quality[/td]
+${scores[28]}
+[/tr]
+[tr]
+[td][font=Arial]31. Character Depth and Portrayal[color=transparent]----------------------------[/color][/td]
+${scores[29]}
+[/tr]
+[tr]
+[td][font=Arial]32. Out-of-Character Demeanor[/td]
+${scores[30]}
+[/table]

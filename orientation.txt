@@ -1,0 +1,90 @@
+[font=Arial][center]LOS SANTOS POLICE DEPARTMENT
+[size=120][color=black][b]PROBATIONARY POLICE OFFICER 
+INTRODUCTORY AND ORIENTATION REPORT[/b][/font][/color][/size][/center]
+
+[table2=1,black,transparent,Arial]
+[tr]
+[tdwidth=1,black,transparent,top,left,30,5]
+[size=87]PROBATIONARY POLICE OFFICER[/size]
+${this.prob_name}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,8,5]
+[size=87]SERIAL NO.[/size]
+${this.prob_serial_num}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,25,5]
+[size=87]FIELD TRAINING OFFICER[/size]
+${this.fto_name}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,8,5]
+[size=87]SERIAL NO.[/size]
+${this.fto_serial_num}
+[/tdwidth][/tr]
+
+[tr]
+[tdwidth=1,black,transparent,top,left,8,5]
+[size=87]PATROL NUMBER[/size]
+${this.ftp_number}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,25,5]
+[size=87]DATE[/size]
+${moment(new Date(this.ftp_date)).format("DD/MMM/YYYY").toUpperCase()}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,15,5]
+[size=87]TIME[/size]
+${moment(new Date(this.ftp_date)).format("HH:mm").toUpperCase()}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,15,5]
+[size=87]DURATION[/size]
+${this.ftp_duration}
+[/tdwidth][/tr]
+[/table2]
+
+[font=Arial][b][size=110]PATROL NARRATIVE[/size][/b][/font]
+
+${this.ftp_narrative}
+
+[font=Arial][b][size=110]ORIENTATION CHECKLIST[/size][/b]
+
+
+[table]
+[tr]
+[td][font=Arial][b]ADMINISTRATIVE[/b][/td]
+[td][font=Arial][center][b]✓[/b][/center][/td]
+[td][font=Arial][center][b]✗[/b][/center][/td]
+[/tr]
+[tr]
+[td][font=Arial]1. Student File Created[/td]
+${scores[0]}
+[/tr]
+[tr]
+[td][font=Arial]2. Personal Inventory Weapons File Created[/td]
+${scores[1]}
+[/tr]
+[tr]
+[td][font=Arial]3. Requested assignment to a Field Training Manager[/td]
+${scores[2]}
+[/tr]
+[tr]
+[td][font=Arial][b]FIELD[/b][/td]
+[/tr]
+[tr]
+[td][font=Arial]4. Mission Row Familiarization[/td]
+${scores[3]}
+[/tr]
+[tr]
+[td][font=Arial][ooc][b]OUT OF CHARACTER[/b][/ooc][/td]
+[/tr]
+[tr]
+[td][font=Arial]5. Teamspeak Binds (Central / TACs)[/td]
+${scores[4]}
+[/tr]
+[tr]
+[td][font=Arial]6. Pager Server[/td]
+${scores[5]}
+[/tr]
+[tr]
+[td][font=Arial]7. General Faction Commands[/td]
+${scores[6]}
+[/tr]
+[/table]
