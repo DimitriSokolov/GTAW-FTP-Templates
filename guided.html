@@ -101,8 +101,11 @@
 
                         section.forEach((grading, index) => {
 
-
-                            var ticked_id = document.querySelector(`input[name="score_${Object.keys(this.gradingCriterias).indexOf(_index)}_${index}"]:checked`).id.split("_").pop()
+                            try{
+                                var ticked_id = document.querySelector(`input[name="score_${Object.keys(this.gradingCriterias).indexOf(_index)}_${index}"]:checked`).id.split("_").pop()
+                            } catch {
+                                var ticked_id = 4;
+                            }
 
 
 
