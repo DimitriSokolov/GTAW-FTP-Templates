@@ -52,18 +52,21 @@
                     <td>{{ criteria }}</td>
                     <td><input class="form-check-input"
                             :id=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}_0` type="radio"
-                            :name=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}`></td>
+                            :name=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}` v-on:change="changeRadio"></td>
                     <td><input class="form-check-input"
                             :id=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}_1` type="radio"
-                            :name=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}`></td>
+                            :name=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}` v-on:change="changeRadio"></td>
                     <td><input class="form-check-input"
                             :id=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}_2` type="radio"
-                            :name=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}`></td>
+                            :name=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}` v-on:change="changeRadio"></td>
+                    <td><input type="button" value="X" @click="resetButton(`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}`)" /> </td>
+
                 </tr>
             </tbody>
         </table>
 
         <button @click="generateBBCode()">Copy BBcode</button>
+        <button @click="resetAll()">Reset All</button>
 
     </div>
 
@@ -77,17 +80,165 @@
 
 
             async created(){
-
+                
                 await fetch('eval_patrol_sections.json').then((res) => res.json()).then(data => this.gradingCriterias = data)
+
+
             },
 
             data() {
                 return {
 
-                    gradingCriterias: []
+                    gradingCriterias: [],
+                    ftp_narrative: localStorage.getItem("eval_ftp_narrative"),
+                    ftp_isummary: localStorage.getItem("eval_ftp_isummary"),
+                    ftp_sufficient: localStorage.getItem("eval_ftp_sufficient"),
+                    ftp_duration: localStorage.getItem("eval_ftp_duration"),
+                    ftp_date: localStorage.getItem("eval_ftp_date"), 
+                    ftp_number: localStorage.getItem("eval_ftp_number"),
+                    fto_serial_num: localStorage.getItem("eval_fto_serial_num"),
+                    fto_name: localStorage.getItem("eval_fto_name"),
+                    prob_serial_num: localStorage.getItem("eval_prob_serial_num"),
+                    prob_name: localStorage.getItem("eval_prob_name")
                 }
             },
+
+            mounted() 
+            {
+
+                this.loadCookies();
+
+            },
+
             methods: {
+
+
+                resetAll()
+                {
+
+
+                    localStorage.removeItem("eval_ftp_narrative");
+                    localStorage.removeItem("eval_ftp_isummary");
+                    localStorage.removeItem("eval_ftp_sufficient");
+                    localStorage.removeItem("eval_ftp_duration")
+                    localStorage.removeItem("eval_ftp_date");
+                    localStorage.removeItem("eval_ftp_number")
+                    localStorage.removeItem("eval_fto_serial_num");
+                    localStorage.removeItem("eval_fto_name");
+                    localStorage.removeItem("eval_prob_serial_num");
+                    localStorage.removeItem("eval_prob_name");
+
+                    Object.keys(this.gradingCriterias).forEach((_index) => {
+
+                        var section = this.gradingCriterias[_index];
+
+
+
+                        section.forEach((grading, index) => {
+                            
+                            localStorage.removeItem(`score_${Object.keys(this.gradingCriterias).indexOf(_index)}_${index}`);
+
+                        });
+                    })
+
+
+                    location.reload()
+                    location.reload()
+
+
+                },
+
+                changeRadio(thing)
+                {
+
+
+                    localStorage.setItem(thing.target.name, thing.target.id.replace(thing.target.name+"_", ""));
+                    
+                },
+
+                returnIfNotNull(field)
+                {
+
+                    if(field == null)
+                    {
+                        return "";
+                    }
+
+                    return field;
+
+                },
+
+                loadCookies: function()
+                {
+                    try
+                    {
+                        
+                        document.getElementById(`score_0_0_0`).checked = false;
+
+                        Object.keys(this.gradingCriterias).forEach((_index) => {
+
+                            var section = this.gradingCriterias[_index];
+
+
+
+                            section.forEach((grading, index) => {
+
+                                
+                                var savedResult = localStorage.getItem(`score_${Object.keys(this.gradingCriterias).indexOf(_index)}_${index}`);
+
+
+                                if(savedResult != null)
+                                {
+
+                                    document.getElementById(`score_${Object.keys(this.gradingCriterias).indexOf(_index)}_${index}_${savedResult}`).checked = true;
+                                }
+
+
+
+                            });
+                        })
+
+                        setInterval(() => {
+                            
+
+                            localStorage.setItem("eval_ftp_narrative", this.returnIfNotNull(this.ftp_narrative));
+                            localStorage.setItem("eval_ftp_isummary", this.returnIfNotNull(this.ftp_isummary));
+                            localStorage.setItem("eval_ftp_sufficient", this.returnIfNotNull(this.ftp_sufficient));
+                            localStorage.setItem("eval_ftp_duration", this.returnIfNotNull(this.ftp_duration));
+                            localStorage.setItem("eval_ftp_date", this.returnIfNotNull(this.ftp_date));
+                            localStorage.setItem("eval_ftp_number", this.returnIfNotNull(this.ftp_number));
+                            localStorage.setItem("eval_fto_serial_num", this.returnIfNotNull(this.fto_serial_num));
+                            localStorage.setItem("eval_fto_name", this.returnIfNotNull(this.fto_name));
+                            localStorage.setItem("eval_prob_serial_num", this.returnIfNotNull(this.prob_serial_num));
+                            localStorage.setItem("eval_prob_name", this.returnIfNotNull(this.prob_name));
+
+
+                        }, 1000);
+
+                    }
+                    catch(err)
+                    {
+                        console.log(err);
+                        setTimeout(() => {
+                            
+
+                            this.loadCookies();
+
+                        }, 1);
+                    }
+
+                },
+
+                resetButton: function(btn)
+                {
+                    for (let index = 0; index < 3; index++) {
+                        
+                        document.getElementById(btn+"_"+index).checked = false;
+                    }
+
+                    localStorage.removeItem(btn);
+
+                },
 
                 async generateBBCode() {
 

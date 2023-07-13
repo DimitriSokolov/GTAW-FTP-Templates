@@ -48,15 +48,18 @@
                     <td>{{ criteria }}</td>
                     <td><input class="form-check-input"
                             :id=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}_0` type="radio"
-                            :name=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}`></td>
+                            :name=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}` v-on:change="changeRadio"></td>
                     <td><input class="form-check-input"
                             :id=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}_1` type="radio"
-                            :name=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}`></td>
+                            :name=`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}` v-on:change="changeRadio"></td>
+                    <td><input type="button" value="X" @click="resetButton(`score_${Object.keys(gradingCriterias).indexOf(_index)}_${index}`)" /> </td>
+
                 </tr>
             </tbody>
         </table>
 
         <button @click="generateBBCode()">Copy BBcode</button>
+        <button @click="resetAll()">Reset All</button>
 
     </div>
 
@@ -77,10 +80,148 @@
             data() {
                 return {
 
-                    gradingCriterias: []
+                    gradingCriterias: [],
+                    ftp_narrative: localStorage.getItem("or_ftp_narrative"),
+                    ftp_duration: localStorage.getItem("or_ftp_duration"),
+                    ftp_date: localStorage.getItem("or_ftp_date"), 
+                    ftp_number: localStorage.getItem("or_ftp_number"),
+                    fto_serial_num: localStorage.getItem("or_fto_serial_num"),
+                    fto_name: localStorage.getItem("or_fto_name"),
+                    prob_serial_num: localStorage.getItem("or_prob_serial_num"),
+                    prob_name: localStorage.getItem("or_prob_name")
+
                 }
             },
+
+
+            mounted() 
+            {
+
+                this.loadCookies();
+
+            },
+
+
+
             methods: {
+                resetAll()
+                {
+
+
+
+
+                    localStorage.removeItem("or_ftp_narrative");
+                    localStorage.removeItem("or_ftp_duration");
+                    localStorage.removeItem("or_ftp_duration");
+                    localStorage.removeItem("or_ftp_number")
+                    localStorage.removeItem("or_fto_serial_num");
+                    localStorage.removeItem("or_ftp_date")
+                    localStorage.removeItem("or_fto_name");
+                    localStorage.removeItem("or_prob_serial_num");
+                    localStorage.removeItem("or_prob_name");
+                    Object.keys(this.gradingCriterias).forEach((_index) => {
+
+                        var section = this.gradingCriterias[_index];
+
+
+
+                        section.forEach((grading, index) => {
+                            
+                            localStorage.removeItem(`or_score_${Object.keys(this.gradingCriterias).indexOf(_index)}_${index}`);
+
+                        });
+                    })
+
+
+                    location.reload()
+
+
+                },
+
+                changeRadio(thing)
+                {
+
+
+                    localStorage.setItem("or_" + thing.target.name, thing.target.id.replace(thing.target.name+"_", ""));
+                    
+                },
+
+                returnIfNotNull(field)
+                {
+
+                    if(field == null)
+                    {
+                        return "";
+                    }
+
+                    return field;
+
+                },
+
+                loadCookies: function()
+                {
+                    try
+                    {
+                        
+                        document.getElementById(`score_0_0_0`).checked = false;
+
+                        Object.keys(this.gradingCriterias).forEach((_index) => {
+
+                            var section = this.gradingCriterias[_index];
+
+
+
+                            section.forEach((grading, index) => {
+                                
+                                var savedResult = localStorage.getItem(`or_score_${Object.keys(this.gradingCriterias).indexOf(_index)}_${index}`);
+
+                                if(savedResult != null)
+                                {
+                                    document.getElementById(`score_${Object.keys(this.gradingCriterias).indexOf(_index)}_${index}_${savedResult}`).checked = true;
+                                }
+
+                            });
+                        })
+
+                        setInterval(() => {
+                            
+
+                            localStorage.setItem("or_ftp_narrative", this.returnIfNotNull(this.ftp_narrative));
+                            localStorage.setItem("or_ftp_duration", this.returnIfNotNull(this.ftp_duration));
+                            localStorage.setItem("or_ftp_date", this.returnIfNotNull(this.ftp_date));
+                            localStorage.setItem("or_ftp_number", this.returnIfNotNull(this.ftp_number));
+                            localStorage.setItem("or_fto_serial_num", this.returnIfNotNull(this.fto_serial_num));
+                            localStorage.setItem("or_fto_name", this.returnIfNotNull(this.fto_name));
+                            localStorage.setItem("or_prob_serial_num", this.returnIfNotNull(this.prob_serial_num));
+                            localStorage.setItem("or_prob_name", this.returnIfNotNull(this.prob_name));
+
+
+                        }, 1000);
+
+                    }
+                    catch(err)
+                    {
+                        console.log(err);
+                        setTimeout(() => {
+                            
+
+                            this.loadCookies();
+
+                        }, 1);
+                    }
+
+                },
+
+                resetButton: function(btn)
+                {
+                    for (let index = 0; index < 3; index++) {
+                        
+                        document.getElementById(btn+"_"+index).checked = false;
+                    }
+
+                    localStorage.removeItem('guided_'+btn);
+
+                },
 
                 async generateBBCode() {
 
