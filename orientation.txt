@@ -62,28 +62,25 @@ ${scores[0]}
 ${scores[1]}
 [/tr]
 [tr]
-[td][font=Arial]3. Requested assignment to a Field Training Manager[/td]
-[/tr]
-[tr]
 [td][font=Arial][b]FIELD[/b][/td]
 [/tr]
 [tr]
-[td][font=Arial]4. Mission Row Familiarization[/td]
+[td][font=Arial]3. Mission Row Familiarization[/td]
 ${scores[2]}
 [/tr]
 [tr]
 [td][font=Arial][ooc][b]OUT OF CHARACTER[/b][/ooc][/td]
 [/tr]
 [tr]
-[td][font=Arial]5. Teamspeak Binds (Central / TACs)[/td]
+[td][font=Arial]4. Teamspeak Binds (Central / TACs)[/td]
 ${scores[3]}
 [/tr]
 [tr]
-[td][font=Arial]6. Pager Server[/td]
+[td][font=Arial]5. Pager Server[/td]
 ${scores[4]}
 [/tr]
 [tr]
-[td][font=Arial]7. General Faction Commands[/td]
+[td][font=Arial]6. General Faction Commands[/td]
 ${scores[5]}
 [/tr]
 [/table]
