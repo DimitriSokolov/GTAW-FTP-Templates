@@ -1,0 +1,208 @@
+[font=Arial][color=black]Page [u]1[/u] of [u]1[/u][/color][/font]
+[hr][/hr]
+[font=Arial][center]LOS SANTOS POLICE DEPARTMENT
+[size=120][color=black][b]PROBATIONARY POLICE OFFICER 
+DAILY OBSERVATION REPORT[/b][/font][/color][/size][/center]
+
+[table2=1,black,transparent,Arial]
+[tr]
+[tdwidth=1,black,transparent,top,left,30,5]
+[size=87]PROBATIONARY POLICE OFFICER[/size]
+${this.daily_prob_name}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,8,5]
+[size=87]SERIAL NO.[/size]
+${this.daily_prob_serial_num}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,25,5]
+[size=87]FIELD TRAINING OFFICER[/size]
+${this.daily_fto_name}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,8,5]
+[size=87]SERIAL NO.[/size]
+${this.daily_fto_serial_num}
+[/tdwidth][/tr]
+
+[tr]
+[tdwidth=1,black,transparent,top,left,8,5]
+[size=87]PATROL NUMBER[/size]
+${this.daily_ftp_number}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,25,5]
+[size=87]DATE[/size]
+${moment(new Date(this.daily_ftp_date)).format("DD/MMM/YYYY").toUpperCase()}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,15,5]
+[size=87]TIME[/size]
+${moment(new Date(this.daily_ftp_date)).format("HH:mm").toUpperCase()}
+[/tdwidth]
+[tdwidth=1,black,transparent,top,left,15,5]
+[size=87]DURATION[/size]
+${this.daily_ftp_duration}
+[/tdwidth][/tr]
+[/table2]
+
+[font=Arial][b][size=110]INCIDENTS/TASKS[/size][/b][/font]
+
+${this.daily_incidents}
+
+[font=Arial][b][size=110]BELOW STANDARD PERFORMANCE[/size][/b][/font]
+
+${this.daily_belowstandard}
+
+[font=Arial][b][size=110]ABOVE STANDARD PERFORMANCE[/size][/b][/font]
+
+${this.daily_abovestandard}
+
+[font=Arial][b][size=110](( ROLEPLAY REMARKS ))[/size][/b][/font]
+
+[ooc]${this.daily_roleplayremarks}[/ooc]
+
+
+[font=Arial][b][size=110]EVALUATION CATEGORIES[/size][/b]
+
+[b]RATING INSTRUCTIONS: Use the following scale to rate the probationary police officer's performance. A SPECIFIC comment MUST be made on the Daily Observation Report if a rating of (1) BELOW STANDARD, (2) IMPROVEMENT REQUIRED, or (4) ABOVE STANDARD is given. Check NOT OBSERVED (N/O) if behaviour is not observed.[/b]
+[list=none](1) [b][u]BELOW STANDARD:[/u][/b] - The behavior demonstrates an inability to accomplish required tasks.
+(2) [b][u]IMPROVEMENT REQUIRED:[/u][/b] - Performance is progressing towards acceptable, but does not yet meet the agency's standard.
+(3) [b][u]STANDARD:[/u][/b] - The behavior demonstrates an adequate ability to accomplish required tasks.
+(4) [b][u]ABOVE STANDARD:[/u][/b] - The behavior demonstrates a more than adequate ability to accomplish required tasks.
+(N/O) [b][u]NOT OBSERVED:[/u][/b] - The behavior was not observed.[/list]
+[table]
+[tr]
+[td][font=Arial][b]APPEARANCE[/b][/td]
+[td][font=Arial][center][b]1[/b][/center][/td]
+[td][font=Arial][center][b]2[/b][/center][/td]
+[td][font=Arial][center][b]3[/b][/center][/td]
+[td][font=Arial][center][b]4[/b][/center][/td]
+[td][font=Arial][center][b]N/O[/b][/center][/td]
+[/tr]
+[tr]
+[td][font=Arial]1. General Appearance[/td]
+${scores[0]}
+[/tr]
+[tr]
+[td][b][font=Arial]ATTITUDE[/b][/td]
+[/tr]
+[tr]
+[td][font=Arial]2. Acceptance of Feedback[/td]
+${scores[1]}
+[/tr]
+[tr]
+[td][font=Arial]3. Attitude towards the Job[/td]
+${scores[2]}
+[/tr]
+[tr]
+[td][b][font=Arial]KNOWLEDGE[/b][/td]
+[/tr]
+[tr]
+[td][font=Arial]4. Department Policies/Procedures[color=transparent]------------------------------------------------------[/color][/td]
+${scores[3]}
+[/tr]
+[tr]
+[td][font=Arial]5. Law, Penal Code, Search and Seizure[color=transparent]---------------------------------------------[/color][/td]
+${scores[4]}
+[/tr]
+[tr]
+[td][b][font=Arial]PERFORMANCE[/b][/td]
+[/tr]
+[tr]
+[td][font=Arial]6. Driving Skill: Normal Patrol Conditions[color=transparent]--[/color][/td]
+${scores[5]}
+[/tr]
+[tr]
+[td][font=Arial]7. Driving Skill: Moderate and Stress Conditions[/td]
+${scores[6]}
+[/tr]
+[tr]
+[td][font=Arial]8. Driving Skill: Orientation and Response Time to Calls[/td]
+${scores[7]}
+[/tr]
+[tr]
+[td][font=Arial]9. Reports/Forms: Accuracy/Completeness/Appropriate Time Used[/td]
+${scores[8]}
+[/tr]
+[tr]
+[td][font=Arial]10. Report Writing: Level/Grammar/Spelling/Neatness[/td]
+${scores[9]}
+[/tr]
+[tr]
+[td][font=Arial]11. Field Performance: Non-Stress Conditions[/td]
+${scores[10]}
+[/tr]
+[tr]
+[td][font=Arial]12. Field Performance: Stress Conditions[/td]
+${scores[11]}
+[/tr]
+[tr]
+[td][font=Arial]13. Self-Initiated Field Activites[/td]
+${scores[12]}
+[/tr]
+[tr]
+[td][font=Arial]14. Field Activities: Traffic Stop[/td]
+${scores[13]}
+[/tr]
+[tr]
+[td][font=Arial]15. Field Activities: Arrest Procedure[/td]
+${scores[14]}
+[/tr]
+[tr]
+[td][font=Arial]16. Officer Safety: General[/td]
+${scores[15]}
+[/tr]
+[tr]
+[td][font=Arial]17. Officer Safety: Suspects/Prisoners[/td]
+${scores[16]}
+[/tr]
+[tr]
+[td][font=Arial]18. Control of Conflict: Voice Command[/td]
+${scores[17]}
+[/tr]
+[tr]
+[td][font=Arial]19. Control of Conflict: Physical Skill[/td]
+${scores[18]}
+[/tr]
+[tr]
+[td][font=Arial]20. Use of Common Sense and Good Judgement[/td]
+${scores[19]}
+[/tr]
+[tr]
+[td][font=Arial]21. Radio/MDC: Appropriate Use of Communications Codes[/td]
+${scores[20]}
+[/tr]
+[tr]
+[td][font=Arial]22. Radio/MDC: Use of Mobile Data Computer[/td]
+${scores[21]}
+[/tr]
+[tr]
+[td][font=Arial]23. Radio: Articulation of Transmissions[/td]
+${scores[22]}
+[/tr]
+
+[tr]
+[td][font=Arial][b]RELATIONSHIPS[/b][/td]
+[/tr]
+[tr]
+[td][font=Arial]24. With Citizens in General[color=transparent]-----------------------[/color][/td]
+${scores[23]}
+[/tr]
+[tr]
+[tr]
+[td][font=Arial]25. With Other Employees[/td]
+${scores[24]}
+[/tr]
+[tr]
+[td][font=Arial][b](( ROLEPLAY QUALITY ))[/b][/td]
+[/tr]
+[tr]
+[td][font=Arial]26. Roleplay Quality[/td]
+${scores[25]}
+[/tr]
+[tr]
+[td][font=Arial]27. Character Depth and Portrayal[color=transparent]----------------------------[/color][/td]
+${scores[26]}
+[/tr]
+[tr]
+[td][font=Arial]28. Out-of-Character Demeanor[/td]
+${scores[27]}
+[/tr]
+[/table]

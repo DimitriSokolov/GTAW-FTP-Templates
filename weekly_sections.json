@@ -1,0 +1,42 @@
+{
+    "APPEARANCE": [
+        "1. General Appearance"
+    ],
+    "ATTITUDE": [
+        "2. Acceptance of Feedback",
+        "3. Attitude towards the Job"
+    ],
+    "KNOWLEDGE": [
+        "4. Department Policies/Procedures",
+        "5. Law, Penal Code, Search and Seizure"
+    ],
+    "PERFORMANCE": [
+        "6. Driving Skill: Normal Patrol Conditions",
+        "7. Driving Skill: Moderate and Stress Conditions",
+        "8. Driving Skill: Orientation and Response Time to Calls",
+        "9. Reports/Forms: Accuracy/Completeness/Appropriate Time Used",
+        "10. Report Writing: Level/Grammar/Spelling/Neatness",
+        "11. Field Performance: Non-Stress Conditions",
+        "12. Field Performance: Stress Conditions",
+        "13. Self-Initiated Field Activites",
+        "14. Field Activities: Traffic Stop",
+        "15. Field Activities: Arrest Procedure",
+        "16. Officer Safety: General",
+        "17. Officer Safety: Suspects/Prisoners",
+        "18. Control of Conflict: Voice Command",
+        "19. Control of Conflict: Physical Skill",
+        "20. Use of Common Sense and Good Judgement",
+        "21. Radio/MDC: Appropriate Use of Communications Codes",
+        "22. Radio/MDC: Use of Mobile Data Computer",
+        "23. Radio: Articulation of Transmissions"
+    ],
+    "RELATIONSHIPS": [
+        "24. With Citizens in General",
+        "25. With Other Employees"
+    ],
+    "(( ROLEPLAY QUALITY ))": [
+        "30. Roleplay Quality",
+        "31. Character Depth and Portrayal",
+        "32. Out-of-Character Demeanor"
+    ]
+}
