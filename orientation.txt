@@ -1,3 +1,5 @@
+[font=Arial][color=black]Page [u]1[/u] of [u]1[/u][/color][/font]
+[hr][/hr]
 [font=Arial][center]LOS SANTOS POLICE DEPARTMENT
 [size=120][color=black][b]PROBATIONARY POLICE OFFICER 
 INTRODUCTORY AND ORIENTATION REPORT[/b][/font][/color][/size][/center]
@@ -40,10 +42,6 @@ ${this.ftp_duration}
 [/tdwidth][/tr]
 [/table2]
 
-[font=Arial][b][size=110]PATROL NARRATIVE[/size][/b][/font]
-
-${this.ftp_narrative}
-
 [font=Arial][b][size=110]ORIENTATION CHECKLIST[/size][/b]
 
 
@@ -54,33 +52,45 @@ ${this.ftp_narrative}
 [td][font=Arial][center][b]✗[/b][/center][/td]
 [/tr]
 [tr]
-[td][font=Arial]1. Student File Created[/td]
+[td][font=Arial]1. Probationer's Divisional Notebook Created[/td]
 ${scores[0]}
 [/tr]
 [tr]
-[td][font=Arial]2. Personal Inventory Weapons File Created[/td]
-${scores[1]}
+[td][font=Arial][b]FIELD[/b][/td]
 [/tr]
 [tr]
-[td][font=Arial][b]FIELD[/b][/td]
+[td][font=Arial]2. Uniform and Equipment Checks[/td]
+${scores[1]}
 [/tr]
 [tr]
 [td][font=Arial]3. Mission Row Familiarization[/td]
 ${scores[2]}
 [/tr]
 [tr]
-[td][font=Arial][ooc][b]OUT OF CHARACTER[/b][/ooc][/td]
-[/tr]
-[tr]
-[td][font=Arial]4. Teamspeak Binds (Central / TACs)[/td]
+[td][font=Arial]4. Radio Setup[/td]
 ${scores[3]}
 [/tr]
 [tr]
-[td][font=Arial]5. Pager Server[/td]
+[td][font=Arial]5. Vehicle Checks (ELS, Maintenance Forms etc.)[/td]
 ${scores[4]}
 [/tr]
 [tr]
-[td][font=Arial]6. General Faction Commands[/td]
+[td][font=Arial][ooc][b]OUT OF CHARACTER[/b][/ooc][/td]
+[/tr]
+[tr]
+[td][font=Arial]6. Teamspeak Binds (Central / TACs)[/td]
 ${scores[5]}
 [/tr]
+[tr]
+[td][font=Arial]7. Vehicle Spawning[/td]
+${scores[6]}
+[/tr]
+[tr]
+[td][font=Arial]8. General Faction Commands[/td]
+${scores[7]}
+[/tr]
 [/table]
+[br][/br]
+[font=Arial][b][size=110]INCIDENTS/TASKS[/size][/b][/font]
+
+[list]${stringToList(this.ftp_narrative)}[/list]

@@ -1,14 +1,16 @@
 {
     "ADMINISTRATIVE": [
-        "1. Student File Created",
-        "2. Personal Inventory Weapons File Created"
+        "1. Probationer's Divisional Notebook Created"
     ],
     "FIELD": [
-        "3. Mission Row Familiarization"
+        "2. Uniform and Equipment Checks",
+        "3. Mission Row Familiarization",	
+        "4. Radio Setup",	
+        "5. Vehicle Checks (ELS, Maintenance Forms etc.)"
     ],
     "(( OUT OF CHARACTER ))": [
-        "4. Teamspeak Binds (Central / TACs)",
-        "5. Pager Server",
-        "6. General Faction Commands"
+        "6. Teamspeak Binds (Central / TACs)",
+        "7. Vehicle Spawning",
+        "8. General Faction Commands"
     ]
 }
