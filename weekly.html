@@ -100,8 +100,6 @@
 
 
         SIGNATURE OF FIELD TRAINING MANAGER <input type="text" v-model="weekly_signature_ftm"><br>
-        SIGNATURE OF FIELD TRAINING SAC <input type="text" v-model="weekly_signature_ftsac"><br>
-        APPROVED DATE <input type="datetime-local" v-model="weekly_date"><br>
 
         Weekly Performance<br>
 
@@ -148,8 +146,6 @@
                     weekly_remedial: localStorage.getItem("weekly_remedial"),
                     weekly_comments: localStorage.getItem("weekly_comments"),
                     weekly_signature_ftm: localStorage.getItem("weekly_signature_ftm"),
-                    weekly_signature_ftsac: localStorage.getItem("weekly_signature_ftsac"),
-                    weekly_date: localStorage.getItem("weekly_date"),
                     weekly_rating: localStorage.getItem("weekly_rating")
                 }
             },
@@ -178,8 +174,6 @@
                     localStorage.removeItem("weekly_remedial");
                     localStorage.removeItem("weekly_comments");
                     localStorage.removeItem("weekly_signature_ftm");
-                    localStorage.removeItem("weekly_signature_ftsac");
-                    localStorage.removeItem("weekly_date");
                     localStorage.removeItem("weekly_rating");
                     Object.keys(this.gradingCriterias).forEach((_index) => {
 
@@ -260,8 +254,6 @@
                             localStorage.setItem("weekly_remedial", this.returnIfNotNull(this.weekly_remedial));
                             localStorage.setItem("weekly_comments", this.returnIfNotNull(this.weekly_comments));
                             localStorage.setItem("weekly_signature_ftm", this.returnIfNotNull(this.weekly_signature_ftm));
-                            localStorage.setItem("weekly_signature_ftsac", this.returnIfNotNull(this.weekly_signature_ftsac));
-                            localStorage.setItem("weekly_date", this.returnIfNotNull(this.weekly_date));
                             localStorage.setItem("weekly_rating", this.returnIfNotNull(this.weekly_rating));
 
 

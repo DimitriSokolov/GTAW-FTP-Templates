@@ -50,121 +50,73 @@ ${scores[0]}
 ${scores[1]}
 [/tr]
 [tr]
-[td][font=Arial]3. Attitude towards the Job[/td]
-${scores[2]}
-[/tr]
-[tr]
 [td][b][font=Arial]KNOWLEDGE[/b][/td]
 [/tr]
 [tr]
-[td][font=Arial]4. Department Policies/Procedures[color=transparent]------------------------------------------------------[/color][/td]
-${scores[3]}
+[td][font=Arial]3. Department Policies/Procedures[color=transparent]------------------------------------------------------[/color][/td]
+${scores[2]}
 [/tr]
 [tr]
-[td][font=Arial]5. Law, Penal Code, Search and Seizure[color=transparent]---------------------------------------------[/color][/td]
-${scores[4]}
+[td][font=Arial]4. Law, Penal Code, Search and Seizure[color=transparent]---------------------------------------------[/color][/td]
+${scores[3]}
 [/tr]
 [tr]
 [td][b][font=Arial]PERFORMANCE[/b][/td]
 [/tr]
 [tr]
-[td][font=Arial]6. Driving Skill: Normal Patrol Conditions[color=transparent]--[/color][/td]
+[td][font=Arial]5. Driving Skill: General[color=transparent]--[/color][/td]
+${scores[4]}
+[/tr]
+[tr]
+[td][font=Arial]6. Driving Skill: Orientation and Response Time to Calls[/td]
 ${scores[5]}
 [/tr]
 [tr]
-[td][font=Arial]7. Driving Skill: Moderate and Stress Conditions[/td]
+[td][font=Arial]7. Report Writing: Accuracy/Grammar/Organisation[/td]
 ${scores[6]}
 [/tr]
 [tr]
-[td][font=Arial]8. Driving Skill: Orientation and Response Time to Calls[/td]
+[td][font=Arial]8. Field Performance[/td]
 ${scores[7]}
 [/tr]
 [tr]
-[td][font=Arial]9. Reports/Forms: Accuracy/Completeness/Appropriate Time Used[/td]
+[td][font=Arial]9. Self-Initiated Field Activites[/td]
 ${scores[8]}
 [/tr]
 [tr]
-[td][font=Arial]10. Report Writing: Level/Grammar/Spelling/Neatness[/td]
+[td][font=Arial]10. Field Activities: Traffic Stop[/td]
 ${scores[9]}
 [/tr]
 [tr]
-[td][font=Arial]11. Field Performance: Non-Stress Conditions[/td]
+[td][font=Arial]11. Field Activities: Arrest Procedure[/td]
 ${scores[10]}
 [/tr]
 [tr]
-[td][font=Arial]12. Field Performance: Stress Conditions[/td]
+[td][font=Arial]12. Officer Safety Principles[/td]
 ${scores[11]}
 [/tr]
 [tr]
-[td][font=Arial]13. Self-Initiated Field Activites[/td]
+[td][font=Arial]13. Control of Conflict: Voice Command/Physical Skill[/td]
 ${scores[12]}
 [/tr]
 [tr]
-[td][font=Arial]14. Field Activities: Traffic Stop[/td]
+[td][font=Arial]14. Use of Common Sense and Good Judgement[/td]
 ${scores[13]}
 [/tr]
 [tr]
-[td][font=Arial]15. Field Activities: Arrest Procedure[/td]
+[td][font=Arial]15. Radio/MDC: Use of Mobile Data Computer[/td]
 ${scores[14]}
 [/tr]
 [tr]
-[td][font=Arial]16. Officer Safety: General[/td]
+[td][font=Arial]16. Radio: Articulation of Transmissions[/td]
 ${scores[15]}
-[/tr]
-[tr]
-[td][font=Arial]17. Officer Safety: Suspects/Prisoners[/td]
-${scores[16]}
-[/tr]
-[tr]
-[td][font=Arial]18. Control of Conflict: Voice Command[/td]
-${scores[17]}
-[/tr]
-[tr]
-[td][font=Arial]19. Control of Conflict: Physical Skill[/td]
-${scores[18]}
-[/tr]
-[tr]
-[td][font=Arial]20. Use of Common Sense and Good Judgement[/td]
-${scores[19]}
-[/tr]
-[tr]
-[td][font=Arial]21. Radio/MDC: Appropriate Use of Communications Codes[/td]
-${scores[20]}
-[/tr]
-[tr]
-[td][font=Arial]22. Radio/MDC: Use of Mobile Data Computer[/td]
-${scores[21]}
-[/tr]
-[tr]
-[td][font=Arial]23. Radio: Articulation of Transmissions[/td]
-${scores[22]}
 [/tr]
 [tr]
 [td][font=Arial][b]RELATIONSHIPS[/b][/td]
 [/tr]
 [tr]
-[td][font=Arial]24. With Citizens in General[color=transparent]-----------------------[/color][/td]
-${scores[23]}
-[/tr]
-[tr]
-[tr]
-[td][font=Arial]25. With Other Employees[/td]
-${scores[24]}
-[/tr]
-[tr]
-[td][font=Arial][b](( ROLEPLAY QUALITY ))[/b][/td]
-[/tr]
-[tr]
-[td][font=Arial]26. Roleplay Quality[/td]
-${scores[25]}
-[/tr]
-[tr]
-[td][font=Arial]27. Character Depth and Portrayal[color=transparent]----------------------------[/color][/td]
-${scores[26]}
-[/tr]
-[tr]
-[td][font=Arial]28. Out-of-Character Demeanor[/td]
-${scores[27]}
+[td][font=Arial]17. With Citizens/Employees in General[color=transparent]-----------------------[/color][/td]
+${scores[16]}
 [/tr]
 [/table][table2=1,black,transparent,Arial]
 [tr][tdwidth=1,black,transparent,top,left,100,5][b]Regarding the probationer’s performance:[/b]
@@ -184,14 +136,7 @@ ${this.weekly_comments}
 [tdwidth=1,black,transparent,top,left,100,5]
 [size=87]SIGNATURE OF FIELD TRAINING MANAGER[/size]
 ${this.weekly_signature_ftm}[/tr]
-[tr]
-[tdwidth=1,black,transparent,top,left,100,5]
-[size=87]SIGNATURE OF FIELD TRAINING SAC[/size]
-${this.weekly_signature_ftsac}[/tr]
-[tr]
-[tdwidth=1,black,transparent,top,left,100,5]
-[size=87]APPROVED DATE[/size]
-${this.fixDate(moment(new Date(this.weekly_date)).format("DD/MMM/YYYY").toUpperCase())}[/tr]
+
 [/aligntable]
 [aligntable=right,0,0,0,0,0,0]
 [center][font=Arial][size=110][b]Weekly Performance[/b][/center]
